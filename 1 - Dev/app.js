@@ -27,8 +27,8 @@ function toggleStatut(id, estCoche) {
 
 // Afficher la liste
 function afficher() {
-  const ul = document.getElementById("objets");
-  ul.replaceChildren();
+  const Listeobjets = document.getElementById("objets");
+  Listeobjets.replaceChildren();
   
   const objets = lireObjets();
 
@@ -41,12 +41,33 @@ function afficher() {
   }
 
   for (const o of objets) {
-    const li = document.createElement("li");
-    li.className = "carte-objet";
+    // const li = document.createElement("li");
+    // li.className = "carte-objet";
 
     // 1. Texte d'information (Nom, Bénévole, Catégorie)
     const infos = document.createElement("div");
-    infos.textContent = o.nom + " " + o.proprietaire + " Bénévole en charge : " + o.benevole + " Catégorie : " + o.categorie;
+    infos.textContent = o.objet + " | " + o.nom + " " + o.prenom + " | Bénévole en charge : " + o.benevole + " | Catégorie : " + o.categorie;
+
+    const listTable = document.createElement('table');
+    listTable.innerHTML = `
+      <thead>
+        <tr>
+          <th>Objet</th>
+          <th>Nom & Prénom</th>
+          <th>Bénévole en charge</th>
+          <th>Catégorie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>${o.objet}</td>
+          <td>${o.nom} ${o.prenom}</td>
+          <td>${o.benevole}</td>
+          <td>${o.categorie}</td>
+        </tr>
+      </tbody>`;
+      infos.innerHTML = ''; // On vide le texte existant
+      infos.appendChild(listTable);
 
     // 2. Affichage du statut (le mot "en attente" ou "fini")
     const statut = document.createElement("div");
@@ -70,8 +91,7 @@ function afficher() {
     labelCheckbox.append(checkbox, " Réparation terminée");
 
     // 4. On assemble le tout dans la liste (li)
-    li.append(infos, statut, labelCheckbox);
-    ul.append(li);
+    Listeobjets.append(infos, statut, labelCheckbox);
   }
 }
 
@@ -83,11 +103,13 @@ document.getElementById("form-inscription").addEventListener("submit", (e) => {
   
   objets.push({ 
     id: Date.now(), 
-    nom: data.get("nom"), 
-    proprietaire: data.get("proprietaire"), 
-    benevole: " ", 
+    objet: data.get("nom"), 
+    nom: data.get("nom-user"), 
+    prenom: data.get("prenom-user"), 
+    phone: data.get("phone-number"), 
+    benevole: "...", 
     statut: "en attente",
-    categorie: data.get("categorie")
+    categorie: data.get("categories")
   });
 
   sauverObjets(objets);

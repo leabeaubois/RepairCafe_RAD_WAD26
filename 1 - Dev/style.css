@@ -9,6 +9,8 @@
     --texte: #1b1b3a;
     --framboise: #d10f5a;
     --bleu: #2541ff;
+    --menu-text: rgb(0, 0, 90);
+    box-sizing: border-box;
 }
 
 h1,
@@ -24,8 +26,9 @@ body {
     color: var(--texte); 
 
     header { 
+      position: relative;
         background: var(--principal); 
-        color: white; 
+        color: var(--menu-text); 
         padding: 1rem;
         border-bottom: 4px solid var(--bleu);
 
@@ -53,7 +56,7 @@ body {
 
                 li {
                     a {
-                        color: white;
+                        color: var(--menu-text);
                         text-decoration: none;
 
                         &:hover {
@@ -67,6 +70,7 @@ body {
     }
 
     main { 
+        padding: 6rem 0 0 0;
         max-width: 900px; 
         margin: auto; 
         padding: 1rem; 

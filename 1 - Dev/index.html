@@ -49,8 +49,10 @@
 
     
       <form id="form-inscription">
-        <label>Nom <input name="nom"></label>
-        <label>Personne qui dépose l'objet <input name="proprietaire"></label>
+        <label>Objet <input name="nom" required>*</label>
+        <label>Nom <input name="nom-user" required>*</label>
+        <label>Prénom <input name="prenom-user" required>*</label>
+        <label>Numéro de téléphone <input name="phone-number"></label>
         <label for="categorie"></label>
         <select id="categorie" name="categories">
           <option value="">-- Choisissez une catégorie --</option>
@@ -67,7 +69,7 @@
     <!-- E03 : liste des inscriptions -->
     <section id="liste">
       <h2>Objets inscrits</h2>
-      <ul id="objets"></ul>
+      <div id="objets"></div>
     </section>
 
     <section id="membres">
