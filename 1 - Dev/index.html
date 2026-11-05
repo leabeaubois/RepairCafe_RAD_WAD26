@@ -67,16 +67,25 @@
       <p>TODO : horaires, adresse, mission.</p>
     </section>
 
-
-
-
     <h2>Déposer un objet à réparer</h2>
     <p>Déposer un objet cassé pour qu'un bénévole le répare!</p>
+
+    
     <!-- E02 : formulaire d'inscription -->
     <section id="inscription">
       <h2>Inscrire un objet</h2>
       <form id="form-inscription">
         <label>Nom <input name="nom"></label>
+        <label>Personne qui dépose l'objet <input name="proprietaire"></label>
+        <label for="categorie"></label>
+        <select id="categorie" name="categories">
+          <option value="">-- Choisissez une catégorie --</option>
+          <option value="electromenager">Electroménager</option>
+          <option value="vehicule-motor">Véhicule motorisé ou électrique</option>
+          <option value="vehicule-muscle">Vélo, trotinette non électrique</option>
+          <option value="accessoire">Accessoire de cuisine</option>
+          <option value="vetement">Vêtements</option>
+        </select>
         <!-- TODO : e-mail, objet, description de la panne -->
         <button type="submit">Envoyer</button>
       </form>
