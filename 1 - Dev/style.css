@@ -4,11 +4,11 @@
 }
 
 :root { 
-    --principal: #2b6cb0;
-    --fond: #f7fafc; 
-    --texte: #1a202c; 
-    --orange: #ff6f00;
-    --doux: #4A5568;
+    --principal: #ffcc00;
+    --fond: #fff8e7;
+    --texte: #1b1b3a;
+    --framboise: #d10f5a;
+    --bleu: #2541ff;
 }
 
 h1,
@@ -27,7 +27,7 @@ body {
         background: var(--principal); 
         color: white; 
         padding: 1rem;
-        border-bottom: 4px solid var(--doux);
+        border-bottom: 4px solid var(--bleu);
 
         display: flex;
         justify-content: space-between;
@@ -57,7 +57,7 @@ body {
                         text-decoration: none;
 
                         &:hover {
-                            color: var(--orange);
+                            color: var(--framboise);
                             text-decoration: none;
                         }
                     }
