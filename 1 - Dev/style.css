@@ -1,0 +1,6 @@
+:root { --principal: #2b6cb0; --fond: #f7fafc; --texte: #1a202c; }
+body { font-family: system-ui, sans-serif; margin: 0; background: var(--fond); color: var(--texte); }
+header { background: var(--principal); color: white; padding: 1rem; }
+main { max-width: 900px; margin: auto; padding: 1rem; }
+section { background: white; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+label { display: block; margin-bottom: .5rem; }
