@@ -1,6 +1,107 @@
-:root { --principal: #2b6cb0; --fond: #f7fafc; --texte: #1a202c; }
-body { font-family: system-ui, sans-serif; margin: 0; background: var(--fond); color: var(--texte); }
-header { background: var(--principal); color: white; padding: 1rem; }
-main { max-width: 900px; margin: auto; padding: 1rem; }
-section { background: white; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+@font-face {
+    font-family: MontserratAlternates-Medium;
+    src: url(fonts/MontserratAlternates-Medium.ttf);
+}
+
+:root { 
+    --principal: #ffcc00;
+    --fond: #fff8e7;
+    --texte: #1b1b3a;
+    --framboise: #d10f5a;
+    --bleu: #2541ff;
+}
+
+h1,
+h2,
+h3 {
+    font-family: MontserratAlternates-Medium;
+}
+
+body { 
+    font-family: system-ui, sans-serif; 
+    margin: 0; 
+    background: var(--fond); 
+    color: var(--texte); 
+
+    header { 
+        background: var(--principal); 
+        color: white; 
+        padding: 1rem;
+        border-bottom: 4px solid var(--bleu);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        h1 {
+            font-size: 1.5rem;
+
+            .logo {
+                font-size: 2rem;
+
+            }
+        }
+
+        nav {
+            ul {
+                list-style: none;
+                
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                li {
+                    a {
+                        color: white;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: var(--framboise);
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main { 
+        max-width: 900px; 
+        margin: auto; 
+        padding: 1rem; 
+
+        section { 
+            background: white; 
+            border-radius: 8px; 
+            padding: 1rem; 
+            margin-bottom: 1rem; 
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+
+                th,
+                td {
+                    text-align: center;
+                    border-bottom: 1px solid var(--texte);
+                    padding: 0.5rem;
+                }
+
+                th {
+                    background-color: var(--fond);
+                    border-bottom: 2px solid var(--principal);
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: var(--principal);
+        text-align: center;
+
+        padding: 1rem;
+    }
+}
+
 label { display: block; margin-bottom: .5rem; }
