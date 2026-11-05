@@ -18,7 +18,8 @@ function afficher() {
   ul.replaceChildren();
   for (const o of lireObjets()) {
     const li = document.createElement("li");
-    li.textContent = o.nom; // TODO : afficher l'objet, le statut...
+    createElement.HTML
+    li.textContent = o.nom + " " + o.statut + " " + o.proprietaire + " Bénévole en charge : " + o.benevole ;
     ul.append(li);
   }
 }
