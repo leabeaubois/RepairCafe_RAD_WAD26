@@ -4,9 +4,11 @@
 }
 
 :root { 
-    --principal: #2b6cb0; 
+    --principal: #2b6cb0;
     --fond: #f7fafc; 
     --texte: #1a202c; 
+    --orange: #ff6f00;
+    --doux: #4A5568;
 }
 
 h1,
@@ -25,6 +27,7 @@ body {
         background: var(--principal); 
         color: white; 
         padding: 1rem;
+        border-bottom: 4px solid var(--doux);
 
         display: flex;
         justify-content: space-between;
@@ -45,6 +48,7 @@ body {
                 list-style: none;
                 
                 display: flex;
+                flex-wrap: wrap;
                 gap: 1rem;
 
                 li {
@@ -53,7 +57,7 @@ body {
                         text-decoration: none;
 
                         &:hover {
-                            color: var(--texte);
+                            color: var(--orange);
                             text-decoration: none;
                         }
                     }
@@ -83,8 +87,20 @@ body {
                     border-bottom: 1px solid var(--texte);
                     padding: 0.5rem;
                 }
+
+                th {
+                    background-color: var(--fond);
+                    border-bottom: 2px solid var(--principal);
+                }
             }
         }
+    }
+
+    footer {
+        background-color: var(--principal);
+        text-align: center;
+
+        padding: 1rem;
     }
 }
 
