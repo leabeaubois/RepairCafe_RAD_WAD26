@@ -1,79 +1,50 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Repair Café — La Clé à Molette</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header><h1>🔧 Repair Café « La Clé à Molette »</h1></header>
+  <header>
+    <h1><a href="#accueil" class="logo">🔧</a> Repair Café « La Clé à Molette »</h1>
+    <nav class="nav_bar">
+      <ul>
+        <li><a href="#missions">MISSIONS</a></li>
+        <li><a href="#inscription">INSCRIPTION</a></li>
+        <li><a href="#liste">OBJETS</a></li>
+        <li><a href="#membres">MEMBRES</a></li>
+        <li><a href="#horaire">HORAIRE</a></li>
+        <li><a href="#accessibilite">ACCESSIBILITE</a></li>
+        <li></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
     <!-- E01 : page d'accueil -->
     <section id="accueil"><h2>Bienvenue</h2>
-      <h2>Horaire d'ouvertures</h2>
-      <table>
-      <thead>
-        <tr>
-          <th>Jour</th>
-          <th>Horaires d'ouverture</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Lundi</td>
-          <td>Fermé</td>
-        </tr>
-        <tr>
-          <td>Mardi</td>
-          <td>14h00 - 18h00</td>
-        </tr>
-        <tr>
-          <td>Mercredi</td>
-          <td>14h00 - 18h00</td>
-        </tr>
-        <tr>
-          <td>Jeudi</td>
-          <td>Fermé</td>
-        </tr>
-        <tr>
-          <td>Vendredi</td>
-          <td>14h00 - 18h00</td>
-        </tr>
-        <tr>
-          <td>Samedi</td>
-          <td>14h00 - 18h00</td>
-        </tr>
-        <tr>
-          <td>Dimanche</td>
-          <td>Fermé</td>
-        </tr>
-      </tbody>
-    </table>
+      <p>Notre site de l'ASBL "Clé à molette" vous propose de réparer gratuitement vos objets cassés : grille-pain, vélo, sèche-cheveux, lampe, etc.</p>
 
-
-      <h2>Comment venir</h2>
-      <p>Description</p>
-
-      <h2>Notrer</h2>
-      <p>Mission</p>
-
-      <h2>Devenir bénévole réparateurice</h2>
-      <p>Description</p>
-
-
-
-
-      <p>TODO : horaires, adresse, mission.</p>
+      <h2 id="missions">Nos missions</h2>
+      <p>Chez nous, un objet cassé n'est pas un déchet : c'est un objet qui attend un coup de main. Notre association défend une idée simple : réparer avant de jeter.</p>
+      <ul>
+        <li><strong>Réduire le gaspillage</strong> > Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic similique quidem iure ab? Facilis at minima nisi laboriosam. Illo molestiae quos iste atque excepturi explicabo?</li>
+        <li><strong>Redonner une seconde vie aux objets</strong> > Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non adipisci dicta enim?</li>
+        <li><strong>Dépenser moins</strong> > Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum recusandae ratione odit repellendus voluptate sit ea suscipit eveniet consequuntur molestiae! Explicabo voluptatum adipisci libero amet, repellendus minima eligendi soluta excepturi quod? Quas, culpa repellat!</li>
+        <li><strong>Apprendre ensemble</strong> > Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        <li><strong>Sensibiliser</strong> > Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero consequatur dolorum veniam officia hic! Cum, nulla!</li>
+        <li><strong>Préserver notre planète</strong> > Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt praesentium nostrum suscipit ex cumque, nesciunt autem, repellendus, temporibus deserunt neque veniam!</li>
+      </ul>
     </section>
 
-
-
-
-    <h2>Déposer un objet à réparer</h2>
-    <p>Déposer un objet cassé pour qu'un bénévole le répare!</p>
+    <h2 id="inscription">Déposer un objet à réparer</h2>
+    <p>Déposer un objet cassé pour qu'un·e bénévole le répare !</p>
     <!-- E02 : formulaire d'inscription -->
-    <section id="inscription">
+    <section id="inscription_membre">
       <h2>Inscrire un objet</h2>
       <form id="form-inscription">
         <label>Nom <input name="nom"></label>
@@ -83,9 +54,69 @@
     </section>
 
     <!-- E03 : liste des inscriptions -->
-    <section id="liste"><h2>Objets inscrits</h2><ul id="objets"></ul></section>
+    <section id="liste">
+      <h2>Objets inscrits</h2>
+      <ul id="objets"></ul>
+    </section>
+
+    <section id="membres">
+      <h2 id="membre">Devenir bénévole réparateurice</h2>
+      <p>Vous savez manier le fer à souder, une machine à coudre ou un visseuse ? Rejoignez l'équipe !</p>
+      <p><a href="mailto:contact@cle-a-molette.be">Ecrire</a> à l'équipe ✉️</p>
+    </section>   
+
+    <section>
+      <h2 id="horaire">Horaire d'ouvertures</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Jour</th>
+            <th>Horaires d'ouverture</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lundi</td>
+            <td>Fermé</td>
+          </tr>
+          <tr>
+            <td>Mardi</td>
+            <td>14h00 - 18h00</td>
+          </tr>
+          <tr>
+            <td>Mercredi</td>
+            <td>14h00 - 18h00</td>
+          </tr>
+          <tr>
+            <td>Jeudi</td>
+            <td>Fermé</td>
+          </tr>
+          <tr>
+            <td>Vendredi</td>
+            <td>14h00 - 18h00</td>
+          </tr>
+          <tr>
+            <td>Samedi</td>
+            <td>14h00 - 18h00</td>
+          </tr>
+          <tr>
+            <td>Dimanche</td>
+            <td>Fermé</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="accessibilite">
+      <h2>Comment venir</h2>
+      <p>Description</p>
+    </section>
   </main>
-  <footer><small>Vos données servent uniquement à organiser la session de réparation.</small></footer>
+
+  <footer>
+    <small>Vos données servent uniquement à organiser la session de réparation.</small>
+  </footer>
+
   <script src="app.js"></script>
 </body>
 </html>
