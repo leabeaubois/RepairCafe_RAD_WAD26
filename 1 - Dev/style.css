@@ -81,6 +81,7 @@ body {
                 td {
                     text-align: center;
                     border-bottom: 1px solid var(--texte);
+                    padding: 0.5rem;
                 }
             }
         }
